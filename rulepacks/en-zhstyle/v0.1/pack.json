@@ -1,0 +1,2557 @@
+{
+  "pack_id": "en-zhstyle",
+  "name": "English Chinese-Style Pack",
+  "version": "0.1.0",
+  "language": "en",
+  "style": "zh-thought",
+  "rules": [
+    {
+      "rule_id": "EN_L2_LEX_0001",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Huge crowds",
+      "replacement": "People mountain people sea",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0002",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Crowded with people",
+      "replacement": "People mountain people sea",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0003",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Turn on the light",
+      "replacement": "Open the light",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0004",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Shut down the computer",
+      "replacement": "Close the computer",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0005",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Extremely convenient",
+      "replacement": "Very convenient",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0006",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Easy to use",
+      "replacement": "Very convenient",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0007",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Use your phone",
+      "replacement": "Play mobile phone",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0008",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I am a teacher",
+      "replacement": "My job is a teacher",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0009",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I work as a teacher",
+      "replacement": "My job is a teacher",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0010",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Tea grows well",
+      "replacement": "Tea trees grow well",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0011",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "When will you go back to America?",
+      "replacement": "When will you come back to America?",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0012",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This food is delicious",
+      "replacement": "Very delicious this food is",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0013",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I will go to Beijing tomorrow",
+      "replacement": "Tomorrow I will go to Beijing",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0014",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "In my opinion",
+      "replacement": "According to my opinion",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0015",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Provide services to users",
+      "replacement": "To users provide service",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0016",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "He spends 2 hours learning English every day",
+      "replacement": "He every day spends 2 hours learn English",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0017",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I like the film very much",
+      "replacement": "I very much like the film",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0018",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I don't think I can",
+      "replacement": "I think I can't",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0019",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I thank you very much",
+      "replacement": "I very much thank you",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0020",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Heavy rain",
+      "replacement": "Strong rain",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0021",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "High pressure",
+      "replacement": "Big pressure",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0022",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Heavy traffic",
+      "replacement": "Big traffic",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0023",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Make a decision",
+      "replacement": "Do a decision",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0024",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Attend the meeting",
+      "replacement": "Join the meeting",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0025",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Improve living standards",
+      "replacement": "Raise living level",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0026",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Wait for me",
+      "replacement": "Wait me",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0027",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "I like it here",
+      "replacement": "I like here",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0028",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The price is right",
+      "replacement": "The price is very suitable",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0029",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Analyze data",
+      "replacement": "Make an analysis of data",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0030",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Investigate",
+      "replacement": "Carry out an investigation",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0031",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Optimize",
+      "replacement": "Do an optimization",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0032",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Discuss",
+      "replacement": "Have a discussion",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0033",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Don't know much about that",
+      "replacement": "Have no experience",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0034",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Compare",
+      "replacement": "Make a comparison of",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0035",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Study",
+      "replacement": "Conduct a study on",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0036",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Evaluate",
+      "replacement": "Perform an evaluation of",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0037",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Supports multiple languages",
+      "replacement": "Support multi-language",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0038",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Implement user authentication",
+      "replacement": "Realize login function",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0039",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Add a new feature",
+      "replacement": "Add new function",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0040",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Enable this feature",
+      "replacement": "Open this function",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0041",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Disable this service",
+      "replacement": "Close this service",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0042",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please enter your name",
+      "replacement": "Please input your name",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0043",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Get started",
+      "replacement": "Click to use",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0044",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Start using",
+      "replacement": "Click to use",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0045",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Submitted successfully",
+      "replacement": "Submit success",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0046",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Something went wrong",
+      "replacement": "Operation failed",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0047",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Are you sure you want to delete this?",
+      "replacement": "Confirm to delete?",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0048",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "You don’t have permission",
+      "replacement": "No permission",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0049",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Network error",
+      "replacement": "Network is abnormal",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0050",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please check your internet connection",
+      "replacement": "Please check network",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0051",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Server is busy. Please try again later.",
+      "replacement": "System is busy",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0052",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Attraction",
+      "replacement": "Scenic spot",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0053",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Popular attraction",
+      "replacement": "Famous scenic spot",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0054",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Itinerary",
+      "replacement": "Travel route",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0055",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Tour route",
+      "replacement": "Tour line",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0056",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Explore the city",
+      "replacement": "Play in this city",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0057",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Take the bus to",
+      "replacement": "Take the bus go to",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0058",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Transfer to Line 2",
+      "replacement": "Change to Line 2",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0059",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Get off the bus",
+      "replacement": "Get off the car",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0060",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "train",
+      "replacement": "Get off the car",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0061",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Take the subway",
+      "replacement": "By subway",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0062",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Welcome to our app",
+      "replacement": "Welcome to use our app",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0063",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Have a great trip!",
+      "replacement": "Wish you have a good trip",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0064",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Thanks for using our app",
+      "replacement": "Thanks for your support",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0065",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "If you have any questions",
+      "replacement": "If you have any question",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0066",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is very useful",
+      "replacement": "This function is very practical",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0067",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This app offers many features",
+      "replacement": "This app has many functions",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0068",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is easy to use",
+      "replacement": "Users can use this function conveniently",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0069",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Once this feature is enabled",
+      "replacement": "After opening this function",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0070",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is under development",
+      "replacement": "This function is under developing",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0071",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is not available yet",
+      "replacement": "This function is not supported temporarily",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0072",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We will continue to improve this app",
+      "replacement": "We will continuously optimize this app",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0073",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This version fixes several known issues",
+      "replacement": "This version fixes some known problems",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0074",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please wait",
+      "replacement": "Please wait a moment",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0075",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Loading…",
+      "replacement": "Loading, please wait patiently",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0076",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Too many requests. Please try again later.",
+      "replacement": "Operation is too frequent",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0077",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please follow the instructions",
+      "replacement": "Please operate according to the prompt",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0078",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please do not refresh this page",
+      "replacement": "Please do not refresh the page",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0079",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Loading data",
+      "replacement": "Data is loading",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0080",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "No data available",
+      "replacement": "No data temporarily",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0081",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Failed to load data",
+      "replacement": "Data loading failed",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0082",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Account not found",
+      "replacement": "Account does not exist",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0083",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Incorrect password",
+      "replacement": "Password is wrong",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0084",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Your session has expired",
+      "replacement": "Login has expired",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0085",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please sign in again",
+      "replacement": "Please login again",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0086",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "You are not signed in",
+      "replacement": "You have not logged in",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0087",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "You don’t have access to this page",
+      "replacement": "You do not have access to this page",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0088",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This API is used to retrieve data",
+      "replacement": "This interface is used to get data",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0089",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The system automatically determines",
+      "replacement": "The system will automatically judge",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0090",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Once the system starts",
+      "replacement": "After the system starts",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0091",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This module is designed to",
+      "replacement": "This module mainly realizes",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0092",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is built on",
+      "replacement": "This function is based on",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0093",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The logic is straightforward",
+      "replacement": "The logic is relatively simple",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0094",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This attraction has a long history",
+      "replacement": "This scenic spot has a long history",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0095",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "It’s a great place for photos",
+      "replacement": "It is very suitable to take photos here",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0096",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "There are many great local dishes",
+      "replacement": "There are many delicious foods",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0097",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "It’s easy to get around",
+      "replacement": "Traffic here is very convenient",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0098",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This place is worth visiting",
+      "replacement": "This place is worth to visit",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0099",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "You can spend a full day here",
+      "replacement": "You can play here for one day",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0100",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Thank you for your understanding",
+      "replacement": "Thank you for your understanding",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0101",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Sorry for the inconvenience",
+      "replacement": "Sorry for bringing you inconvenience",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0102",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We’ll take care of it as soon as possible",
+      "replacement": "We will deal with it as soon as possible",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0103",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Feel free to contact us",
+      "replacement": "Please feel free to contact us",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0104",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We’re here to help",
+      "replacement": "We are always at your service",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0105",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This app is ideal for beginners",
+      "replacement": "This app is very suitable for beginners",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0106",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is very powerful",
+      "replacement": "This function is very powerful",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0107",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "highly capable",
+      "replacement": "This function is very powerful",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0108",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature helps users solve problems",
+      "replacement": "This function can help users solve problems",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0109",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Users can get a better experience with this feature",
+      "replacement": "Users can better experience this function",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0110",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature improves efficiency",
+      "replacement": "This function improves user efficiency",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0111",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature is mainly used to",
+      "replacement": "This function is mainly used to",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0112",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This app is designed with user experience in mind",
+      "replacement": "This app focuses on user experience",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0113",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This version adds a lot of new content",
+      "replacement": "This version adds many new contents",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0114",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This feature meets user needs",
+      "replacement": "This function meets user needs",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0115",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This app is easy to use",
+      "replacement": "This app is easy to operate",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0116",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please try again later",
+      "replacement": "Please try again later",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0117",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The request failed",
+      "replacement": "The request failed",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0118",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Request failed",
+      "replacement": "The request failed",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0119",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Request timed out",
+      "replacement": "Request timeout",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0120",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Data error",
+      "replacement": "Data exception",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0121",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "System error",
+      "replacement": "System exception",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0122",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Page not found",
+      "replacement": "Page does not exist",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0123",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Invalid parameters",
+      "replacement": "Parameter error",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0124",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Service unavailable",
+      "replacement": "Service is unavailable",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0125",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The system is under maintenance",
+      "replacement": "The system is under maintenance",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0126",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Your account is logged in on another device",
+      "replacement": "The account has been logged in elsewhere",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0127",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Invalid login credentials",
+      "replacement": "Login information is invalid",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0128",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please link your email address",
+      "replacement": "Please bind your email",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0129",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please complete identity verification",
+      "replacement": "Please complete real-name authentication",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0130",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Incorrect verification code",
+      "replacement": "The verification code is incorrect",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0131",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The verification code has expired",
+      "replacement": "Verification code expired",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0132",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please reset your password",
+      "replacement": "Please reset your password",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0133",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Your account security level is low",
+      "replacement": "Account security level is low",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0134",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Unusual login activity detected",
+      "replacement": "Login status is abnormal",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0135",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This account has been suspended",
+      "replacement": "Account has been frozen",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0136",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This system uses a distributed architecture",
+      "replacement": "This system adopts distributed architecture",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0137",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The system is highly available",
+      "replacement": "The system has high availability",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0138",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The system handles high concurrency",
+      "replacement": "The system supports high concurrency",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0139",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Data is synchronized automatically",
+      "replacement": "Data will be synchronized automatically",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0140",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This API returns JSON data",
+      "replacement": "This interface returns JSON data",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0141",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This service depends on",
+      "replacement": "The service depends on",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0142",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This module is responsible for",
+      "replacement": "This module is responsible for",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0143",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The system performance is stable",
+      "replacement": "The system performance is stable",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0144",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This solution scales well",
+      "replacement": "This solution has good scalability",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0145",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The processing logic is complex",
+      "replacement": "The logic processing is complex",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0146",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This city has convenient transportation",
+      "replacement": "This city has convenient transportation",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0147",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The air here is very clean",
+      "replacement": "The air here is very fresh",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0148",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This attraction is very popular",
+      "replacement": "This attraction is very popular",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0149",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Many visitors come here each year",
+      "replacement": "Many tourists come here every year",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0150",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "It’s great for family trips",
+      "replacement": "It is suitable for family travel",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0151",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "You can experience local culture here",
+      "replacement": "You can enjoy local culture here",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0152",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The weather is pleasant",
+      "replacement": "The weather is comfortable",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0153",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "This place is rich in history",
+      "replacement": "This place is full of history",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0154",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The night view is stunning",
+      "replacement": "The night view is very beautiful",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0155",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "There are many shopping options nearby",
+      "replacement": "There are many shopping places nearby",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0156",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We’ll get back to you as soon as possible",
+      "replacement": "We will reply as soon as possible",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0157",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "If you run into any issues",
+      "replacement": "If you encounter problems",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0158",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We’re happy to help",
+      "replacement": "We sincerely serve you",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0159",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Your feedback is important to us",
+      "replacement": "Your feedback is very important to us",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0160",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We take this issue seriously",
+      "replacement": "We attach great importance to this issue",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0161",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "The issue has been reported",
+      "replacement": "The issue has been reported",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0162",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "We’re working on it",
+      "replacement": "We are processing it",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0163",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Thank you for your patience",
+      "replacement": "Thank you for your patience",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0164",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "Please contact customer support",
+      "replacement": "Welcome to contact customer service",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0165",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "understand",
+      "replacement": "realize（实现）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0166",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "achieve",
+      "replacement": "realize（实现）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0167",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "implement",
+      "replacement": "realize（实现）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0168",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "enable",
+      "replacement": "support（支持一切）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0169",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "work with",
+      "replacement": "support（支持一切）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0170",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "provide",
+      "replacement": "support（支持一切）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0171",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "enable",
+      "replacement": "open（打开功能）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0172",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "launch",
+      "replacement": "open（打开功能）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0173",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "disable",
+      "replacement": "close（关闭功能）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0174",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "turn off",
+      "replacement": "close（关闭功能）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0175",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "establish",
+      "replacement": "build（建立关系）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0176",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "develop",
+      "replacement": "build（建立关系）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0177",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "go on to do (继续做另一件事)",
+      "replacement": "go on（继续做某事）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0178",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "go on doing (继续做同一件事)",
+      "replacement": "go on（继续做某事）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0179",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "go back (回某地)",
+      "replacement": "come back（回某地）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0180",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "come back (回来)",
+      "replacement": "come back（回某地）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0181",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "attend (参加会议)",
+      "replacement": "join（参加会议）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    },
+    {
+      "rule_id": "EN_L2_LEX_0182",
+      "layer": "L2",
+      "type": "lexical_substitution",
+      "pattern": "join (加入组织)",
+      "replacement": "join（参加会议）",
+      "case_insensitive": true,
+      "word_boundary": true,
+      "min_level": 2,
+      "max_level": 5,
+      "domain_weight": {
+        "default": 1.0
+      }
+    }
+  ]
+}

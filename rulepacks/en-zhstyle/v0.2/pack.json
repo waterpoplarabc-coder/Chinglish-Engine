@@ -1,0 +1,194 @@
+{
+  "pack_id": "en-zhstyle-structural",
+  "name": "English Chinese-Style Structural Pack",
+  "version": "0.2.0",
+  "language": "en",
+  "style": "zh-thought",
+  "rules": [
+    {
+      "rule_id": "EN_L0_CAUSE_FIRST_SO",
+      "layer": "L0",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 100,
+      "trigger_regex": "\\bbecause\\b",
+      "pattern": "^(.*?),\\s*because\\s+(.+?)([.!?])$",
+      "replacement": "Because \\2, so \\1\\3",
+      "domain_weight": { "default": 1.0 }
+    },
+    {
+      "rule_id": "EN_L0_IF_THEN",
+      "layer": "L0",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 95,
+      "trigger_regex": "^if\\b",
+      "pattern": "^(If\\s+.+?),(\\s*.+?)([.!?])$",
+      "replacement": "\\1, then\\2\\3",
+      "domain_weight": { "default": 1.0 }
+    },
+    {
+      "rule_id": "EN_L0_SO_PREFIX",
+      "layer": "L0",
+      "type": "prefix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 10,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "So,",
+      "domain_weight": { "default": 0.6 }
+    },
+    {
+      "rule_id": "EN_L1_TIME_FRONTING",
+      "layer": "L1",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 90,
+      "trigger_regex": "\\b(today|tomorrow|yesterday)\\b[.!?]?$",
+      "pattern": "^(.+?)\\s+(today|tomorrow|yesterday)([.!?])$",
+      "replacement": "\\2 \\1\\3",
+      "domain_weight": { "default": 1.0 }
+    },
+    {
+      "rule_id": "EN_L1_INSTEAD_OF_THAT",
+      "layer": "L1",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 30,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "For this part,",
+      "domain_weight": { "default": 0.35 }
+    },
+    {
+      "rule_id": "EN_L0_FIRST_PREFIX",
+      "layer": "L0",
+      "type": "prefix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 20,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "First,",
+      "domain_weight": { "default": 0.45 }
+    },
+    {
+      "rule_id": "EN_L0_THEN_SUFFIX",
+      "layer": "L0",
+      "type": "suffix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 5,
+      "trigger_regex": "[.!?]$",
+      "suffix": ", then we can continue",
+      "domain_weight": { "default": 0.25 }
+    },
+    {
+      "rule_id": "EN_L0_IN_MY_OPINION",
+      "layer": "L0",
+      "type": "prefix_injection",
+      "min_level": 2,
+      "max_level": 5,
+      "priority": 15,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "In my opinion,",
+      "domain_weight": { "default": 0.25 }
+    },
+    {
+      "rule_id": "EN_L0_ACCORDING_TO_MY_OPINION",
+      "layer": "L0",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 12,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "According to my opinion,",
+      "domain_weight": { "default": 0.2 }
+    },
+    {
+      "rule_id": "EN_L1_TOPIC_ABOUT",
+      "layer": "L1",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 40,
+      "trigger_regex": "\\bis\\b",
+      "pattern": "^(This|That|It)\\s+is\\s+(.+?)([.!?])$",
+      "replacement": "About this, it is \\2\\3",
+      "domain_weight": { "default": 0.4 }
+    },
+    {
+      "rule_id": "EN_L1_IS_VERY",
+      "layer": "L1",
+      "type": "regex_substitution",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 35,
+      "trigger_regex": "\\bis\\s+(good|bad|useful|important|difficult|easy)\\b",
+      "pattern": "\\bis\\s+(good|bad|useful|important|difficult|easy)\\b",
+      "replacement": "is very \\1",
+      "domain_weight": { "default": 0.5 }
+    },
+    {
+      "rule_id": "EN_L0_ACTUALLY_PREFIX",
+      "layer": "L0",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 14,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "Actually,",
+      "domain_weight": { "default": 0.25 }
+    },
+    {
+      "rule_id": "EN_L2_PLEASE_INPUT",
+      "layer": "L2",
+      "type": "regex_substitution",
+      "min_level": 2,
+      "max_level": 5,
+      "priority": 60,
+      "trigger_regex": "\\benter\\b",
+      "pattern": "\\benter\\b",
+      "replacement": "input",
+      "domain_weight": { "default": 0.7 }
+    },
+    {
+      "rule_id": "EN_L2_REALIZE_IMPLEMENT",
+      "layer": "L2",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 55,
+      "trigger_regex": "\\bimplement\\b",
+      "pattern": "\\bimplement\\b",
+      "replacement": "realize",
+      "domain_weight": { "default": 0.7 }
+    },
+    {
+      "rule_id": "EN_L2_SUPPORT_EVERYTHING",
+      "layer": "L2",
+      "type": "regex_substitution",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 54,
+      "trigger_regex": "\\benable\\b|\\bwork with\\b",
+      "pattern": "\\benable\\b",
+      "replacement": "support",
+      "domain_weight": { "default": 0.6 }
+    },
+    {
+      "rule_id": "EN_L0_FOR_USERS_SUFFIX",
+      "layer": "L0",
+      "type": "suffix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 8,
+      "trigger_regex": "\\b(feature|function|service)\\b",
+      "suffix": " for users",
+      "domain_weight": { "default": 0.35 }
+    }
+  ]
+}
+

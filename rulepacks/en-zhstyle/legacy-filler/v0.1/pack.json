@@ -1,0 +1,90 @@
+{
+  "pack_id": "en-zhstyle-legacy-filler",
+  "name": "English Chinese-Style Legacy Fillers",
+  "version": "0.1.0",
+  "language": "en",
+  "style": "zh-thought",
+  "rules": [
+    {
+      "rule_id": "EN_LEGACY_SO_PREFIX",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 10,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "So,"
+    },
+    {
+      "rule_id": "EN_LEGACY_FOR_THIS_PART",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 30,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "For this part,"
+    },
+    {
+      "rule_id": "EN_LEGACY_FIRST_PREFIX",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 20,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "First,"
+    },
+    {
+      "rule_id": "EN_LEGACY_ACTUALLY_PREFIX",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 14,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "Actually,"
+    },
+    {
+      "rule_id": "EN_LEGACY_IN_MY_OPINION",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 2,
+      "max_level": 5,
+      "priority": 15,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "In my opinion,"
+    },
+    {
+      "rule_id": "EN_LEGACY_ACCORDING_TO_MY_OPINION",
+      "layer": "LEGACY",
+      "type": "prefix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 12,
+      "trigger_regex": "^[A-Za-z]",
+      "prefix": "According to my opinion,"
+    },
+    {
+      "rule_id": "EN_LEGACY_THEN_SUFFIX",
+      "layer": "LEGACY",
+      "type": "suffix_injection",
+      "min_level": 4,
+      "max_level": 5,
+      "priority": 5,
+      "trigger_regex": "[.!?]$",
+      "suffix": ", then we can continue"
+    },
+    {
+      "rule_id": "EN_LEGACY_FOR_USERS_SUFFIX",
+      "layer": "LEGACY",
+      "type": "suffix_injection",
+      "min_level": 3,
+      "max_level": 5,
+      "priority": 8,
+      "trigger_regex": "\\b(feature|function|service)\\b",
+      "suffix": " for users"
+    }
+  ]
+}
+

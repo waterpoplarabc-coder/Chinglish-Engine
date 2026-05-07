@@ -1,0 +1,83 @@
+[
+  {
+    "name": "phrase_good_morning",
+    "text": "Good morning",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "morning good",
+    "expected_rules": ["EN_PHRASE_GOOD_MORNING_SWAP"]
+  },
+  {
+    "name": "phrase_thank_you_keep",
+    "text": "Thank you",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "Thank you",
+    "expected_rules": []
+  },
+  {
+    "name": "want_time_reorder_l5",
+    "text": "I want to go to China tomorrow.",
+    "lang": "en",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "I want tomorrow go China.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "planning_time_reorder_l4",
+    "text": "I'm planning to go to China tomorrow.",
+    "lang": "en",
+    "level": 4,
+    "domain": "default",
+    "expected_output": "I am planning tomorrow to go to China.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "hoping_time_reorder_l4",
+    "text": "I'm hoping to go to China tomorrow.",
+    "lang": "en",
+    "level": 4,
+    "domain": "default",
+    "expected_output": "I am hoping tomorrow to go to China.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "already_zh_order_no_change",
+    "text": "I want tomorrow go China.",
+    "lang": "en",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "I want tomorrow go China.",
+    "expected_rules": []
+  },
+  {
+    "name": "svo_time_place_fronting",
+    "text": "I bought a book at the bookstore yesterday",
+    "lang": "en",
+    "level": 4,
+    "domain": "default",
+    "expected_output": "I yesterday at the bookstore bought a book",
+    "expected_rules": ["EN_ZH_SKELETON_S_T_P_V_O"]
+  },
+  {
+    "name": "lexical_turn_on_light",
+    "text": "Please turn on the light.",
+    "lang": "en",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "Please Open the light.",
+    "expected_rules": ["EN_L2_LEX_0003"]
+  },
+  {
+    "name": "unsupported_language_passthrough",
+    "text": "Bonjour",
+    "lang": "fr",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "Bonjour",
+    "expected_rules": []
+  }
+]
