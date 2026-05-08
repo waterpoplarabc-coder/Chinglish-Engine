@@ -81,7 +81,7 @@ body {
   line-height: 1.5;
 }
 
-/* Grid Layout */
+/* Grid Layout - Stacked vertically */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -89,10 +89,10 @@ body {
   width: 100%;
 }
 
+/* Control rows - keep side by side on larger screens */
 @media (min-width: 1024px) {
-  .grid {
+  .control-row {
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
   }
 }
 
@@ -176,12 +176,6 @@ textarea:focus {
 }
 
 @media (min-width: 640px) {
-  .control-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
   .control-row {
     grid-template-columns: 1fr 1fr;
   }
