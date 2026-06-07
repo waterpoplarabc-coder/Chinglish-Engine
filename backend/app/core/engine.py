@@ -356,7 +356,7 @@ class RewriteEngine:
 
         # ── 主谓宾+时间+地点重排 ──
         out, step_id, sk, template_used = self._try_svo_time_place_reorder(
-            core=core, skeleton_template=skeleton_template,
+            core=core, level=level, skeleton_template=skeleton_template,
         )
         if step_id:
             return out + punct, step_id, sk, "simple", template_used
@@ -460,12 +460,15 @@ class RewriteEngine:
         return out, rid, sk, template
 
     def _try_svo_time_place_reorder(
-        self, core: str, skeleton_template: str,
+        self, core: str, level: int, skeleton_template: str,
     ) -> tuple[str, str | None, list[SkeletonItem], str]:
         """主谓宾+时间+地点重排：I bought a book at the bookstore yesterday → I yesterday at the bookstore bought a book.
 
         只在 level >= 3 时生效。
         """
+        if level < 3:
+            return core, None, [], "auto"
+
         m = re.match(r"^(?P<subj>I|We|You|He|She|They)\s+(?P<rest>.+)$", core, flags=re.IGNORECASE)
         if not m:
             return core, None, [], "auto"

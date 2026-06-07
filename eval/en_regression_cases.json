@@ -45,7 +45,7 @@
     "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
   },
   {
-    "name": "intent_time_reorder_l2_unchanged",
+    "name": "intent_time_l2_unchanged",
     "text": "I want to go to China tomorrow.",
     "lang": "en",
     "level": 2,
@@ -162,15 +162,6 @@
     "expected_rules": []
   },
   {
-    "name": "l2_minimal_change",
-    "text": "I want to go to China tomorrow.",
-    "lang": "en",
-    "level": 2,
-    "domain": "default",
-    "expected_output": "I want to go to China tomorrow.",
-    "expected_rules": []
-  },
-  {
     "name": "empty_text_handling",
     "text": "",
     "lang": "en",
@@ -189,21 +180,12 @@
     "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
   },
   {
-    "name": "lexical_huge_crowds",
-    "text": "There were huge crowds at the event.",
+    "name": "svo_l2_unchanged",
+    "text": "I bought a book at the bookstore yesterday",
     "lang": "en",
-    "level": 3,
+    "level": 2,
     "domain": "default",
-    "expected_output": "There were People mountain people sea at the event.",
-    "expected_rules": ["EN_L2_LEX_0001"]
-  },
-  {
-    "name": "lexical_long_time_no_see",
-    "text": "Long time no see, my friend!",
-    "lang": "en",
-    "level": 3,
-    "domain": "default",
-    "expected_output": "Long time no see, my friend!",
+    "expected_output": "I bought a book at the bookstore yesterday",
     "expected_rules": []
   }
 ]

@@ -88,7 +88,6 @@ export default function App() {
           domain,
           seed: seedValue,
           explain,
-          mode: "zh_skeleton_literal",
           discourse_filler: legacyFiller,
           skeleton_template: skeletonTemplate,
           literal_lexical: literalLexical
