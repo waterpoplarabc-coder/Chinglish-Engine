@@ -18,12 +18,48 @@
     "expected_rules": []
   },
   {
-    "name": "want_time_reorder_l5",
+    "name": "phrase_good_night",
+    "text": "Good night",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "night good",
+    "expected_rules": ["EN_PHRASE_GOOD_NIGHT_SWAP"]
+  },
+  {
+    "name": "intent_time_reorder_l3",
+    "text": "I want to go to China tomorrow.",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "I want tomorrow to go to China.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "intent_time_reorder_l5",
     "text": "I want to go to China tomorrow.",
     "lang": "en",
     "level": 5,
     "domain": "default",
     "expected_output": "I want tomorrow go China.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "intent_time_reorder_l2_unchanged",
+    "text": "I want to go to China tomorrow.",
+    "lang": "en",
+    "level": 2,
+    "domain": "default",
+    "expected_output": "I want to go to China tomorrow.",
+    "expected_rules": []
+  },
+  {
+    "name": "intent_time_keep_talk_to",
+    "text": "I want to talk to John tomorrow.",
+    "lang": "en",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "I want tomorrow talk John.",
     "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
   },
   {
@@ -45,7 +81,7 @@
     "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
   },
   {
-    "name": "already_zh_order_no_change",
+    "name": "already_zh_unchanged",
     "text": "I want tomorrow go China.",
     "lang": "en",
     "level": 5,
@@ -72,12 +108,102 @@
     "expected_rules": ["EN_L2_LEX_0003"]
   },
   {
+    "name": "cause_first_so_l3",
+    "text": "I stayed home, because it rained.",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "Because it rained, so I stayed home.",
+    "expected_rules": ["EN_ZH_COMPOUND_BECAUSE_SO"]
+  },
+  {
+    "name": "cause_first_so_l1_unchanged",
+    "text": "I stayed home, because it rained.",
+    "lang": "en",
+    "level": 1,
+    "domain": "default",
+    "expected_output": "I stayed home, because it rained.",
+    "expected_rules": []
+  },
+  {
+    "name": "if_then_l3",
+    "text": "If you come, I will help you.",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "If you come, then I will help you.",
+    "expected_rules": ["EN_ZH_COMPOUND_IF_THEN"]
+  },
+  {
+    "name": "if_then_l1_unchanged",
+    "text": "If you come, I will help you.",
+    "lang": "en",
+    "level": 1,
+    "domain": "default",
+    "expected_output": "If you come, I will help you.",
+    "expected_rules": []
+  },
+  {
     "name": "unsupported_language_passthrough",
     "text": "Bonjour",
     "lang": "fr",
     "level": 5,
     "domain": "default",
     "expected_output": "Bonjour",
+    "expected_rules": []
+  },
+  {
+    "name": "l1_near_native",
+    "text": "I want to go to China tomorrow.",
+    "lang": "en",
+    "level": 1,
+    "domain": "default",
+    "expected_output": "I want to go to China tomorrow.",
+    "expected_rules": []
+  },
+  {
+    "name": "l2_minimal_change",
+    "text": "I want to go to China tomorrow.",
+    "lang": "en",
+    "level": 2,
+    "domain": "default",
+    "expected_output": "I want to go to China tomorrow.",
+    "expected_rules": []
+  },
+  {
+    "name": "empty_text_handling",
+    "text": "",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "",
+    "expected_rules": []
+  },
+  {
+    "name": "output_go_integrity",
+    "text": "I want to go to the United States tomorrow.",
+    "lang": "en",
+    "level": 5,
+    "domain": "default",
+    "expected_output": "I want tomorrow go United States.",
+    "expected_rules": ["EN_ZH_SKELETON_REORDER_INTENT_TIME"]
+  },
+  {
+    "name": "lexical_huge_crowds",
+    "text": "There were huge crowds at the event.",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "There were People mountain people sea at the event.",
+    "expected_rules": ["EN_L2_LEX_0001"]
+  },
+  {
+    "name": "lexical_long_time_no_see",
+    "text": "Long time no see, my friend!",
+    "lang": "en",
+    "level": 3,
+    "domain": "default",
+    "expected_output": "Long time no see, my friend!",
     "expected_rules": []
   }
 ]

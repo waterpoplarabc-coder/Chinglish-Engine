@@ -11,17 +11,16 @@ _engine = RewriteEngine()
 
 
 class RewriteRequest(BaseModel):
-    text: str = Field(min_length=1)
-    lang: str = Field(default="en")
-    level: int = Field(default=3, ge=1, le=5)
-    domain: str = Field(default="default")
-    seed: int | None = None
-    explain: bool = Field(default=True)
-    force_change: bool | None = None
-    mode: str | None = None
-    discourse_filler: bool | None = None
-    skeleton_template: str | None = None
-    literal_lexical: bool | None = None
+    text: str = Field(min_length=1, description="输入英文文本")
+    lang: str = Field(default="en", description="语言（仅支持 en）")
+    level: int = Field(default=3, ge=1, le=5, description="中式强度 1-5")
+    domain: str = Field(default="default", description="领域权重配置")
+    seed: int | None = Field(default=None, description="随机种子（默认=0，确定性输出）")
+    explain: bool = Field(default=True, description="是否返回详细步骤")
+    force_change: bool = Field(default=False, description="即使已中式也强制改写")
+    discourse_filler: bool = Field(default=False, description="添加语篇填充词")
+    skeleton_template: str = Field(default="auto", description="骨架模板 (auto/a/b/c)")
+    literal_lexical: bool = Field(default=True, description="应用词汇替换")
 
 
 class RewriteResponse(BaseModel):
@@ -44,7 +43,6 @@ def rewrite(req: RewriteRequest) -> RewriteResponse:
         seed=req.seed,
         explain=req.explain,
         force_change=req.force_change,
-        mode=req.mode,
         discourse_filler=req.discourse_filler,
         skeleton_template=req.skeleton_template,
         literal_lexical=req.literal_lexical,

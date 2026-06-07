@@ -53,10 +53,9 @@ def main() -> int:
             lang=c.lang,
             level=c.level,
             domain=c.domain,
-            seed=0,
+            seed=42,
             explain=True,
-            force_change=c.force_change,
-            deterministic=True,
+            force_change=c.force_change if c.force_change is not None else False,
         )
         ok_out = True if c.expected_output is None else (r.output == c.expected_output)
         ok_rules = all(x in r.applied_rules for x in c.expected_rules)
