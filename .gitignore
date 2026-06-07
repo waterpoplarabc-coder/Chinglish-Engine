@@ -30,7 +30,7 @@ Thumbs.db
 .env.local
 
 # Build outputs (keep dist for deployment)
-# dist/  # needed by Vercel
+# dist/
 
-# Large datasets (reference only — download separately)
+# Large reference datasets (download separately)
 datasets/
