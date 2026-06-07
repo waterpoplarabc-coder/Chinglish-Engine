@@ -19,18 +19,18 @@ npm-debug.log*
 *.swp
 *.swo
 *~
+.trae/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Build outputs (keep dist for deployment)
-# dist/  # We need this for Vercel
-
-# Local databases
-*.db
-*.sqlite
-
-# Environment variables
+# Environment
 .env
 .env.local
+
+# Build outputs (keep dist for deployment)
+# dist/  # needed by Vercel
+
+# Large datasets (reference only — download separately)
+datasets/
