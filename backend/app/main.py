@@ -78,7 +78,11 @@ Content-Type: application/json
 
     @app.get("/api/health")
     def health():
-        return {"ok": True}
+        return {"ok": True, "version": "2.0"}
+
+    @app.get("/api/version")
+    def version():
+        return {"version": "2.0", "engine": "chinglish", "features": ["L5_strip", "third_person", "compound_sentences", "ui_v2"]}
 
     @app.get("/{full_path:path}")
     def spa_fallback(full_path: str) -> Response:
