@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useCallback } from "react";
 
 type RewriteResponse = {
   output: string;
@@ -14,7 +14,17 @@ function rewriteEndpoint(): string {
   return "/api/rewrite";
 }
 
-// PWA Install Prompt Component
+const EXAMPLES = [
+  { text: "I want to go to China tomorrow.", label: "⏰ Time order" },
+  { text: "I stayed home because it rained.", label: "🔗 Because/So" },
+  { text: "If you come, I will go.", label: "🔗 If/Then" },
+  { text: "Please turn on the light.", label: "💡 Verb choice" },
+  { text: "She goes to school every morning.", label: "🏫 Daily routine" },
+  { text: "I bought a book at the store yesterday.", label: "🛍️ Shopping" },
+  { text: "He reads books every day.", label: "📚 3rd person" },
+  { text: "We plan to visit Beijing next week.", label: "✈️ Future plan" },
+];
+
 function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [showPrompt, setShowPrompt] = useState(false);
@@ -65,6 +75,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<RewriteResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
   const seedValue = useMemo(() => {
     const s = seed.trim();
@@ -106,13 +117,20 @@ export default function App() {
     }
   }
 
+  const handleCopy = useCallback(async () => {
+    if (!result?.output) return;
+    await navigator.clipboard.writeText(result.output);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, [result]);
+
   return (
     <div className="page">
       <InstallPrompt />
       
       <header className="header">
         <div className="title">Chinglish Generator</div>
-        <div className="subtitle">Transform English into Chinese-style English • Learn Chinese thinking patterns</div>
+        <div className="subtitle">Transform English into Chinese-style English • See how Chinese think in English</div>
       </header>
 
       <main className="grid">
@@ -125,16 +143,32 @@ export default function App() {
             placeholder="Enter English text here..."
           />
           
+          {/* Example buttons */}
+          <div className="examples">
+            <span className="examples-label">🎯 Try examples:</span>
+            <div className="example-chips">
+              {EXAMPLES.map((ex) => (
+                <button
+                  key={ex.label}
+                  className="example-chip"
+                  onClick={() => setText(ex.text)}
+                >
+                  {ex.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="controls">
             <div className="control-row">
               <label className="control-label">
                 <span>Intensity</span>
                 <select value={level} onChange={(e) => setLevel(Number(e.target.value))}>
-                  <option value={1}>L1 Near-native</option>
-                  <option value={2}>L2 Mild</option>
-                  <option value={3}>L3 Typical</option>
-                  <option value={4}>L4 Heavy</option>
-                  <option value={5}>L5 Literal</option>
+                  <option value={1}>L1 — Near-native</option>
+                  <option value={2}>L2 — Mild Chinglish</option>
+                  <option value={3}>L3 — Typical Chinglish</option>
+                  <option value={4}>L4 — Heavy Chinglish</option>
+                  <option value={5}>L5 — Pure Chinglish</option>
                 </select>
               </label>
               
@@ -176,7 +210,7 @@ export default function App() {
                   checked={literalLexical}
                   onChange={(e) => setLiteralLexical(e.target.checked)}
                 />
-                Literal translation
+                Word replacement
               </label>
               <label className="check">
                 <input
@@ -202,20 +236,54 @@ export default function App() {
 
         <section className="card output-card">
           <div className="cardTitle">🎯 Output</div>
+          
+          {/* Original ↔ Output comparison */}
+          {result && (
+            <div className="comparison">
+              <div className="compare-row">
+                <div className="compare-label">Original</div>
+                <div className="compare-text">{text.trim()}</div>
+              </div>
+              <div className="compare-arrow">⬇️</div>
+              <div className="compare-row output-row">
+                <div className="compare-label">Chinglish</div>
+                <div className="compare-text chinglish-text">{result.output}</div>
+              </div>
+            </div>
+          )}
+          
           <div className="output-box">
             <pre className="output">{result?.output ?? "Your Chinglish will appear here..."}</pre>
-            <button 
-              className="copy-btn"
-              onClick={() => result?.output && navigator.clipboard.writeText(result.output)}
-              disabled={!result?.output}
-            >
-              📋 Copy
-            </button>
+            <div className="output-actions">
+              <button 
+                className="action-btn"
+                onClick={handleCopy}
+                disabled={!result?.output}
+              >
+                {copied ? "✅ Copied" : "📋 Copy"}
+              </button>
+              <button 
+                className="action-btn"
+                onClick={() => {
+                  if (result?.output) {
+                    const shareText = `Original: ${text.trim()}\nChinglish (L${level}): ${result.output}\n\nTry it: https://chinglish-generator.vercel.app`;
+                    navigator.clipboard.writeText(shareText).then(() => {
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 2000);
+                    });
+                  }
+                }}
+                disabled={!result?.output}
+              >
+                🔗 Share
+              </button>
+            </div>
           </div>
           
           <div className="meta">
             <span className="pill">Structure: {result?.structure_type ?? "—"}</span>
             <span className="pill">Template: {result?.skeleton_template ?? "—"}</span>
+            <span className="pill">Level: L{level}</span>
           </div>
           
           {result?.warnings?.length ? (
@@ -229,37 +297,33 @@ export default function App() {
           {error ? <div className="error">❌ {error}</div> : null}
           
           {result && result.output === text.trim() ? (
-            <div className="warn">ℹ️ Text already follows Chinese structure. Returned as-is.</div>
+            <div className="warn">ℹ️ Text unchanged. Try a higher level or different input.</div>
           ) : null}
 
-          {explain && result && (
+          {explain && result && result.applied_rules.length > 0 && (
             <>
               <div className="cardTitle">📋 Applied Rules</div>
               <div className="rules">
-                {result?.applied_rules?.length ? (
-                  result.applied_rules.map((r) => (
-                    <span key={r} className="pill rule-pill">{r}</span>
-                  ))
-                ) : (
-                  <span className="muted">No rules applied</span>
-                )}
+                {result.applied_rules.map((r) => (
+                  <span key={r} className="pill rule-pill">{r}</span>
+                ))}
               </div>
 
-              <div className="cardTitle">🏗️ Chinese Skeleton</div>
-              <div className="skeleton">
-                {result?.skeleton?.length ? (
-                  result.skeleton.map((s, idx) => (
-                    <span key={`${s.role}-${idx}`} className="skeletonPill">
-                      <strong>{s.role}:</strong> {s.en}
-                      {s.zh ? ` → ${s.zh}` : ""}
-                    </span>
-                  ))
-                ) : (
-                  <span className="muted">—</span>
-                )}
-              </div>
+              {result.skeleton.length > 0 && (
+                <>
+                  <div className="cardTitle">🏗️ Chinese Skeleton</div>
+                  <div className="skeleton">
+                    {result.skeleton.map((s, idx) => (
+                      <span key={`${s.role}-${idx}`} className="skeletonPill">
+                        <strong>{s.role}:</strong> {s.en}
+                        {s.zh ? ` → ${s.zh}` : ""}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              )}
 
-              {result?.steps?.length ? (
+              {result.steps.length > 0 && (
                 <>
                   <div className="cardTitle">🔍 Transformation Steps</div>
                   <div className="steps">
@@ -278,16 +342,16 @@ export default function App() {
                     ))}
                   </div>
                 </>
-              ) : null}
+              )}
             </>
           )}
         </section>
       </main>
 
       <footer className="footer">
-        <div>📱 Install this app: Tap "Share" → "Add to Home Screen" for offline access</div>
+        <div>📱 Install this app for offline access • Share results with friends!</div>
         <div style={{marginTop: '8px', opacity: 0.7}}>
-          Made for non-native Chinese speakers to understand Chinese thinking patterns
+          Made for language learners and curious minds • MIT Licensed • <a href="https://github.com/waterpoplarabc-coder/Chinglish-Engine" target="_blank" rel="noopener">GitHub</a>
         </div>
       </footer>
     </div>

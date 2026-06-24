@@ -52,6 +52,61 @@ def _word_count(text: str) -> int:
     return len(re.findall(r"[A-Za-z]+", text))
 
 
+def _singular_ies(m: re.Match) -> str:
+    """将 -ies 结尾名词转为单数：studies → study, carries → carry"""
+    return m.group(1) + "y"
+
+
+def _singular_s(m: re.Match) -> str:
+    """将 -s 结尾名词转为单数（跳过原单数和 -ies 已处理的）"""
+    w = m.group(0).lower()
+    # 跳过短词（is, has, was, his, its 等）
+    if len(w) <= 3:
+        return m.group(0)
+    # 跳过常见非复数英文词
+    skip_words = {"this", "thus", "plus", "bus", "yes", "gas", "status",
+                  "series", "species", "basis", "crisis", "thesis",
+                  "analysis", "emphasis", "diagnosis",
+                  "process", "success", "access", "address",
+                  "class", "glass", "grass", "stress", "guess"}
+    if w in skip_words:
+        return m.group(0)
+    # 跳过已经以 -ss, -sh, -ch, -x, -o 结尾的（这类+s 是正确复数）
+    if re.search(r"[ssshchxo]s$", w, flags=re.IGNORECASE):
+        return m.group(0)
+    return m.group(0)[:-1]
+
+
+def _strip_3rd_p(text: str) -> str:
+    """去掉第三人称单数动词后缀：goes → go, reads → read, makes → make
+    使用启发式：es/s 结尾的动词去掉后缀。
+    跳过常见非动词以 s/es 结尾的词。
+    """
+    skip_3rd = {"this", "its", "his", "thus", "bus", "plus", "yes", "gas",
+                "status", "series", "species", "basis", "crisis", "thesis",
+                "analysis", "emphasis", "diagnosis",
+                "process", "success", "access", "address",
+                "class", "glass", "grass", "stress", "guess"}
+
+    def _safe_strip(m: re.Match) -> str:
+        w = m.group(0).lower()
+        if w in skip_3rd:
+            return m.group(0)
+        # 跳过 -ss/-sh/-ch/-x/-o 结尾
+        if re.search(r"[ssshchxo]s$", w):
+            return m.group(0)
+        return m.group(1)
+
+    # goes → go, does → do, has → have (特殊处理)
+    text = re.sub(r"\bhas\b", "have", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bdoes\b", "do", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bgoes\b", "go", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bsays\b", "say", text, flags=re.IGNORECASE)
+    # 通用：匹配 es/s 结尾且单词长度 >= 3
+    text = re.sub(r"\b(\w{3,})(?:es|s)\b", _safe_strip, text, flags=re.IGNORECASE)
+    return text
+
+
 def _is_short_phrase(text: str) -> bool:
     """判断是否为短短语（<=3 词），短语不走词汇替换。"""
     core = text.strip().rstrip(".!?")
@@ -226,8 +281,10 @@ class RewriteEngine:
         rng = random.Random(seed)
         normalized = self._normalize(text)
 
-        # ── 短语检测（短短语不走词汇替换） ──
+        # ── 短语检测（短短语不走词汇替换；但 force_change 或 L5 时强制改写） ──
         is_phrase = _is_short_phrase(normalized)
+        if is_phrase and (force_change or level >= 5):
+            is_phrase = False  # L5 或 force_change 下强制处理短句
 
         # ── Step 1: 骨架结构重写 ──
         transformed = normalized
@@ -262,7 +319,17 @@ class RewriteEngine:
             steps.extend(fill_steps)
             applied.extend(fill_applied)
 
-        # ── Step 4: force_change 兜底 ──
+        # ── Step 4: L5 全局剥离（冠词/复数/第三人称/不定式） ──
+        if level >= 5 and not is_phrase:
+            before_l5 = transformed
+            transformed = self._apply_l5_stripping(transformed)
+            if transformed != before_l5:
+                rid = "EN_L5_GLOBAL_STRIP"
+                if explain:
+                    steps.append(RewriteStep(rule_id=rid, before=before_l5, after=transformed))
+                applied.append(rid)
+
+        # ── Step 5: force_change 兜底 ──
         if force_change and transformed == normalized and level >= 2:
             before_fb = transformed
             transformed = self._fallback(transformed, level)
@@ -290,6 +357,25 @@ class RewriteEngine:
         text = _expand_contractions(text)
         text = re.sub(r"\s+", " ", text)
         return text
+
+    # ── L5 全局剥离（冠词/复数/第三人称） ────────────────
+
+    @staticmethod
+    def _apply_l5_stripping(text: str) -> str:
+        """L5 级别：移除冠词、简化复数、去掉第三人称动词后缀。
+        在骨架重写和词汇替换之后全局应用。
+        顺序很重要：先处理特殊动词（去es/s），再处理名词复数。
+        """
+        result = text
+        # 移除冠词 the/a/an
+        result = re.sub(r"\b(the|a|an)\s+", "", result, flags=re.IGNORECASE)
+        # 先处理第三人称动词（含特殊 goes/does/has → go/do/have）
+        result = _strip_3rd_p(result)
+        # 再处理名词复数（跳过已被动词处理过的词）
+        result = re.sub(r"\b(\w+)ies\b", _singular_ies, result, flags=re.IGNORECASE)
+        result = re.sub(r"\b(\w+)(?<![s])s\b", _singular_s, result, flags=re.IGNORECASE)
+        result = re.sub(r"\s+", " ", result).strip()
+        return result
 
     # ── 骨架重写 ─────────────────────────────────────────
 
@@ -328,8 +414,9 @@ class RewriteEngine:
         # ── 复合句 —— 只在 level >= 3 时改写 ──
         if level >= 3:
             # because → so
+            # because 从句（逗号可选："I stayed home because it rained" → "Because it rained, so I stayed home"）
             m_cause = re.match(
-                r"^(?P<main>.+?),\s*because\s+(?P<cause>.+)$", core, flags=re.IGNORECASE
+                r"^(?P<main>.+?)\s*,?\s*because\s+(?P<cause>.+)$", core, flags=re.IGNORECASE
             )
             if m_cause:
                 main = m_cause.group("main").strip()
@@ -346,6 +433,10 @@ class RewriteEngine:
                 main = m_if.group("main").strip()
                 out = f"If {cond}, then {main}".strip() + punct
                 return out, "EN_ZH_COMPOUND_IF_THEN", [], "compound_if", "auto"
+
+        # ── 主语检测（扩展支持第三人称名字） ──
+        subj_match = re.match(r"^(?P<subj>[A-Z][a-z]+|[IY]ou|He|She|They|We)\b", core, flags=re.IGNORECASE)
+        detected_subj = subj_match.group("subj") if subj_match else None
 
         # ── 意图+时间重排（I want [to] go to China tomorrow → I want tomorrow go China）──
         out, step_id, sk, template_used = self._try_intent_time_reorder(
@@ -373,13 +464,16 @@ class RewriteEngine:
         if level < 3:
             return core, None, [], "auto"
 
-        time_words = r"(today|tomorrow|yesterday)"
-        intent_words = r"want|plan|hope|prepare|decide"
+        time_words = r"(today|tomorrow|yesterday|tonight|now|(?:every|next|this)(?:\s+day|\s+morning|\s+night|\s+week|\s+month|\s+year))"
+        intent_words = r"want|plan|hope|prepare|decide|need|like|wants|plans|hopes|prepares|decides|needs|likes"
         intent_ing = r"planning|hoping|preparing|deciding"
 
         # 模式一：I want X tomorrow → 重排时间
+        # 扩展主语：支持 I/You/He/She/They/We + 大写名字
+        subj_pat = r"(?P<subj>I|We|You|He|She|They|[A-Z][a-z]+(?='s|\s|$))"
+
         m = re.match(
-            rf"^(?P<subj>I|We|You|He|She|They)\s+(?P<intent>{intent_words})\s+"
+            rf"^{subj_pat}\s+(?P<intent>{intent_words})\s+"
             rf"(?P<rest>.+?)\s+(?P<time>{time_words})$",
             core, flags=re.IGNORECASE,
         )
@@ -397,7 +491,7 @@ class RewriteEngine:
         else:
             # 模式二：I am planning to X tomorrow
             m2 = re.match(
-                rf"^(?P<subj>I|We|You|He|She|They)\s+(?P<aux>am|are|is)\s+"
+                rf"^{subj_pat}\s+(?P<aux>am|are|is)\s+"
                 rf"(?P<intent>{intent_ing})\s+to\s+"
                 rf"(?P<vp>.+?)\s+(?P<time>{time_words})$",
                 core, flags=re.IGNORECASE,
@@ -419,6 +513,7 @@ class RewriteEngine:
 
         # ── L5 简化：移除不定式 to 和冠词 ──
         rest_stripped = rest
+        # L5 简化：移除不定式 to（现在在全局步骤中处理冠词/复数/第三人称）
         if level >= 5:
             # 移除句子开头的 "to"
             rest_stripped = re.sub(r"^to\s+", "", rest_stripped, flags=re.IGNORECASE)
@@ -430,8 +525,6 @@ class RewriteEngine:
                 rf"\bto\s+(?=\w+)", "",
                 rest_stripped, flags=re.IGNORECASE,
             )
-            # 移除冠词
-            rest_stripped = re.sub(r"\b(the|a|an)\s+", "", rest_stripped, flags=re.IGNORECASE)
             rest_stripped = re.sub(r"\s+", " ", rest_stripped).strip()
 
         # ── 模板应用 ──
@@ -469,7 +562,8 @@ class RewriteEngine:
         if level < 3:
             return core, None, [], "auto"
 
-        m = re.match(r"^(?P<subj>I|We|You|He|She|They)\s+(?P<rest>.+)$", core, flags=re.IGNORECASE)
+        subj_pat = r"(?P<subj>I|We|You|He|She|They|[A-Z][a-z]+(?='s|\s|$))"
+        m = re.match(rf"^{subj_pat}\s+(?P<rest>.+)$", core, flags=re.IGNORECASE)
         if not m:
             return core, None, [], "auto"
         subj = m.group("subj")
@@ -479,8 +573,9 @@ class RewriteEngine:
         if re.match(r"^(want|plan|hope|prepare|decide|planning|hoping|preparing|deciding)\b", rest, flags=re.IGNORECASE):
             return core, None, [], "auto"
 
+        svot_time_words = r"(today|tomorrow|yesterday|tonight|now|(?:every|next|this)(?:\s+day|\s+morning|\s+night|\s+week|\s+month|\s+year))"
         m_time = re.match(
-            rf"^(?P<pre>.+?)\s+(?P<time>today|tomorrow|yesterday)$", rest, flags=re.IGNORECASE,
+            rf"^(?P<pre>.+?)\s+(?P<time>{svot_time_words})$", rest, flags=re.IGNORECASE,
         )
         if not m_time:
             return core, None, [], "auto"
